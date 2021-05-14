@@ -2,6 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\DiyHelper;
+use yii\data\Pagination;
+use yii\helpers\ArrayHelper;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,6 +12,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\helpers\Html;
 
 class SiteController extends Controller
 {
@@ -124,5 +128,17 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionAa()
+    {
+        var_dump(11);exit;
+    }
+
+    public function actionB()
+    {
+        $pagination = new Pagination(['totalCount'=>100,'defaultPageSize'=>10]);
+
+        return $this->render('demo',compact('pagination'));
     }
 }
