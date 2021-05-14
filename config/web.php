@@ -8,7 +8,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'charset' => 'utf-8',
-//    'defaultRoute'=>'site/aa',
+    'defaultRoute'=>'site/aa',
 //    'catchAll'=>[
 //        'site/b',
 //    ],
